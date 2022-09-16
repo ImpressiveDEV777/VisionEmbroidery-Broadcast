@@ -118,11 +118,12 @@
                       {%- endunless -%}
 
                       {%- if block.settings.link_text != '' -%}
-                        <a class="{{ block.settings.button_style }} {{ block.settings.button_color }}"
+                        <a class="{{ block.settings.button_style }} {{ block.settings.button_color }} btn--with-arrow {% if block.settings.contrast %}btn--contrast{% endif %}"
                           href="{{ block.settings.link }}"
                           data-aos="hero"
                           data-aos-anchor="{{ animation_anchor }}"
                           data-aos-order="3">
+                          <span></span>
                           {{ block.settings.link_text | escape }}
                         </a>
                       {%- endif -%}
@@ -533,6 +534,12 @@
             "id": "color",
             "label": "Text",
             "default": "#FFFFFF"
+          },
+          {
+            "type": "checkbox",
+            "id": "contrast",
+            "label": "Button contrast",
+            "default": false
           },
           {
             "type": "header",

@@ -89,7 +89,7 @@
 
           {%- if section.settings.link_text != blank -%}
             <div class = "grid__btn-wrapper text-left {{ btn_modifier }}">
-              <a class="{{ section.settings.button_style }} {{ section.settings.button_color }}"
+              <a class="{{ section.settings.button_style }} {{ section.settings.button_color }} btn--with-arrow"
                 href="{% if section.settings.link_url != blank %}{{ section.settings.link_url }}{% else %}{{ featured_collection.url }}{% endif %}"
                 data-aos="hero"
                 data-aos-anchor="{{ animation_anchor }}"

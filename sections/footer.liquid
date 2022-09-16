@@ -16,7 +16,7 @@
   {%- if section.settings.image -%}
     {%- render 'image-background', img_object: section.settings.image, frame_height_class: 'footer__image', bg_position: section.settings.bg_position -%}
   {%- endif -%}
-  <div class="site-footer">
+  <div class="site-footer wrapper">
     {%- if section.settings.footer_logo -%}
     <style>
       .footer__logo img { width: {{ logo_image_width }}; }
@@ -80,6 +80,25 @@
 
           {%- when 'social' -%}
             <div class="footer__block grid__item {{ footer_column_width }}" {{ block.shopify_attributes }}>
+
+              {%- if block.settings.logo -%}
+              <style>
+                .footer__logo img { width: {{ logo_image_width }}; }
+              </style>
+              <a href="{{ routes.root_url }}" class="footer__logo">
+                {%- assign logo_url = block.settings.logo | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                <img class="lazyload"
+                  src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                  data-src="{{ logo_url }}"
+                  data-widths="[{{ section.settings.logo_image_width }}, {{ retina_size }}]"
+                  data-sizes="auto"
+                  data-aspectratio="{{ block.settings.logo.aspect_ratio }}"
+                  data-parent-fit="contain"
+                  alt="{{ block.settings.logo.alt | default: shop.name | strip_html | escape }}"
+                  id="footerLogoImg-{{ block.id }}"/>
+              </a>
+              {%- endif -%}
+
               {%- assign social_accounts = 'Instagram, Facebook, Twitter, TikTok, Pinterest, Tumblr, YouTube, Vimeo, Linkedin, Snapchat, Feed' | split: ', ' -%}
               {%- if block.settings.title != blank -%}
                 <h2 class="h5 footer__block__title">{{ block.settings.title | escape }}</h2>
@@ -218,7 +237,7 @@
 
 
           <!-- Remove the following line to delete 'Powered by Shopify' from your footer -->
-          <li data-powered-link>{{ powered_by_link }}</li>
+          <!-- <li data-powered-link>{{ powered_by_link }}</li> -->
           <!-- Do not delete below this line -->
 
 
@@ -427,6 +446,11 @@
       "type": "social",
       "name": "Social",
       "settings": [
+        {
+          "type": "image_picker",
+          "id": "logo",
+          "label": "Logo"
+        },
         {
           "type": "text",
           "id": "title",

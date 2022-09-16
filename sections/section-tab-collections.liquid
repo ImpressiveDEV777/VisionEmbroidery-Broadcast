@@ -1,7 +1,11 @@
 <!-- /sections/section-tab-collection.liquid -->
 {%- liquid
   assign mobile_slider = "product-grid--mobile-slider"
-  assign layout_grid = 'product-grid--slider flickity-button-circle'
+  if section.settings.layout == 'grid'
+    assign layout_grid = ''
+  else
+    assign layout_grid = 'product-grid--slider flickity-button-circle'
+  endif
   assign layout_grid_attributes = 'data-slider="' | append: section.id | append: '" data-infinite="false" data-cell-align="left" data-watch-css="true" data-group-cells="true"'
   assign product_grid_outline = settings.product_grid_outline
   assign show_text_shadow = settings.show_text_shadow
@@ -195,7 +199,7 @@
               {%- endcapture -%}
 
               <div class="product-grid-outer">
-                <div class="product-grid{% if show_image %} product-grid--slider-alt{% endif %} {{ mobile_slider }} {{ layout_grid }}{% unless product_grid_outline %} product-grid--borderless{% endunless %}" data-arrows="true" data-arrow-position-middle {{ layout_grid_attributes }}>
+                <div class="product-grid{% if show_image %} product-grid--slider-alt{% endif %} {{ mobile_slider }} {{ layout_grid }} {% unless product_grid_outline %} product-grid--borderless{% endunless %}" data-arrows="true" data-arrow-position-middle {{ layout_grid_attributes }}>
                   {%- if show_image -%}
                     <div class="product-item{{ border_class }}">
                       {{ featured_image }}
@@ -203,7 +207,7 @@
                   {%- endif -%}
 
                   {%- if featured_collection.products.size > 0 -%}
-                    {%- for product in featured_collection.products limit: 12 -%}
+                    {%- for product in featured_collection.products limit: section.settings.products_to_show -%}
                       {%- assign layout_slide_attributes = 'data-slide="' | append: forloop.index0 | append: '" data-slide-index="' | append: forloop.index0 | append: '"' -%}
                       {%- assign animation_index = forloop.index0 | modulo: 4 -%}
                       {%- render 'product-grid-item', product: product, animation_delay: animation_index, additional_attributes: layout_slide_attributes, index: forloop.index, grid_strings: grid_strings -%}
@@ -274,6 +278,25 @@
       "type": "color",
       "id": "color",
       "label": "Text"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Layout",
+      "options": [
+        {"value": "grid", "label": "Grid"},
+        {"value": "carousel", "label": "Carousel"}
+      ],
+      "default": "carousel"
+    },
+    {
+      "type": "range",
+      "id": "products_to_show",
+      "label": "Products to show",
+      "min": 4,
+      "max": 16,
+      "step": 1,
+      "default": 8
     },
     {
       "type": "header",

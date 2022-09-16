@@ -30,13 +30,16 @@
 {%- endstyle -%}
 
 <div id="Product--{{ section.id }}"
-  class="index-product section-padding"
+  class="index-product section-padding wrapper"
   data-section-id="{{ section.id }}"
   data-section-type="product"
   data-tall-layout="false"
   data-enable-history-state="false"
   data-tall-layout="false"
   data-image-zoom-enable="{{ section.settings.enable_zoom }}">
+  {%- if section.settings.title != blank -%}
+    <h2 class="grid__heading text-center aos-init aos-animate" data-aos="hero" data-aos-anchor="" data-aos-order="1">{{ section.settings.title }}</h2>
+  {%- endif -%}
   {%- if product.empty? -%}
     {%- render 'onboarding-product', section: section, unique: section.id -%}
   {%- else -%}
@@ -577,6 +580,11 @@
   {
     "name": "Featured product",
     "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
       {
         "type": "product",
         "id": "home_product",
