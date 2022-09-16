@@ -1,0 +1,301 @@
+{
+  "sections": {
+    "hero": {
+      "type": "section-hero",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Untitled-2_736512a5-bd1e-4634-9e2e-e82bb47f2006.png",
+        "bg_position": "center-center",
+        "height": "image-height",
+        "overlay_opacity": 0,
+        "overlay_color": "#000000",
+        "title": "",
+        "heading_size": 9,
+        "description": "",
+        "text_size": 5,
+        "flex_align": "align--middle-left",
+        "bg_color": "",
+        "color": "#212121",
+        "link_text": "",
+        "link": "",
+        "button_color": "btn--black",
+        "button_style": "hero__btn btn btn--large btn--outline caps"
+      }
+    },
+    "16631375949a192e7b": {
+      "type": "section-collection-carousel",
+      "settings": {
+        "heading": "Trending Style",
+        "description": "",
+        "text_alignment": "left",
+        "link_text": "Shop Now",
+        "link_url": "",
+        "button_color": "btn--primary",
+        "button_style": "hero__btn btn btn--input caps",
+        "featured_collection": "headwear",
+        "bg_color": "",
+        "color": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "tabs": {
+      "type": "section-tab-collections",
+      "blocks": {
+        "tabs-0": {
+          "type": "collection",
+          "settings": {
+            "title": "",
+            "featured_collection": "polo",
+            "show_image": false,
+            "overlay_opacity": 0,
+            "overlay_color": "#000000",
+            "description": "",
+            "color": "",
+            "link_text": "View products",
+            "link": "",
+            "button_color": "btn--white",
+            "button_style": "hero__btn btn btn--large btn--outline caps"
+          }
+        },
+        "tabs-1": {
+          "type": "collection",
+          "settings": {
+            "title": "",
+            "featured_collection": "headwear",
+            "show_image": false,
+            "overlay_opacity": 0,
+            "overlay_color": "#000000",
+            "description": "",
+            "color": "",
+            "link_text": "View products",
+            "link": "",
+            "button_color": "btn--white",
+            "button_style": "hero__btn btn btn--large btn--outline caps"
+          }
+        },
+        "1ecf4e4c-4e3e-49d0-8d38-94ef020686ac": {
+          "type": "collection",
+          "settings": {
+            "title": "",
+            "featured_collection": "t-shirts",
+            "show_image": false,
+            "overlay_opacity": 0,
+            "overlay_color": "#000000",
+            "description": "",
+            "color": "",
+            "link_text": "View products",
+            "link": "",
+            "button_color": "btn--white",
+            "button_style": "hero__btn btn btn--large btn--outline caps"
+          }
+        }
+      },
+      "block_order": [
+        "tabs-0",
+        "tabs-1",
+        "1ecf4e4c-4e3e-49d0-8d38-94ef020686ac"
+      ],
+      "settings": {
+        "title": "",
+        "bg_color": "",
+        "color": "",
+        "padding_top": 32,
+        "padding_bottom": 0
+      }
+    },
+    "lookbook": {
+      "type": "section-look",
+      "disabled": true,
+      "blocks": {
+        "lookbook-0": {
+          "type": "product",
+          "settings": {
+            "product": "",
+            "position_x": 18,
+            "position_y": 50
+          }
+        },
+        "lookbook-1": {
+          "type": "product",
+          "settings": {
+            "product": "",
+            "position_x": 41,
+            "position_y": 7
+          }
+        }
+      },
+      "block_order": [
+        "lookbook-0",
+        "lookbook-1"
+      ],
+      "settings": {
+        "bg_position": "left-center",
+        "title": "Shop the look",
+        "bg_color": "",
+        "color": "",
+        "dot_color": "#ffffff",
+        "dot_background": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "16631385744ffeaec6": {
+      "type": "section-split-hero",
+      "settings": {
+        "image_height": "four-fifty-height-hero",
+        "mobile_layout": "stacked",
+        "image_desktop_left": "shopify:\/\/shop_images\/Untitled-4.jpg",
+        "bg_position_left": "center-center",
+        "image_desktop_right": "shopify:\/\/shop_images\/Untitled-1.jpg",
+        "bg_position_right": "center-center",
+        "overlay_color": "#000000",
+        "overlay_opacity": 0,
+        "title": "",
+        "heading_size": 8,
+        "description": "",
+        "text_size": 3,
+        "flex_align": "align--middle-center",
+        "bg_color": "",
+        "color": "#ffffff",
+        "link_text": "",
+        "link": "",
+        "button_color": "btn--white",
+        "button_style": "hero__btn btn btn--large btn--outline caps"
+      }
+    },
+    "1663138580132377a1": {
+      "type": "section-product",
+      "blocks": {
+        "16631385805859b6fd-0": {
+          "type": "price_and_title",
+          "settings": {
+            "subheading_option": "none",
+            "show_rating": true,
+            "enable_star_rating": true,
+            "show_rating_count": false
+          }
+        },
+        "16631385805859b6fd-1": {
+          "type": "form",
+          "settings": {
+            "info_page": "",
+            "show_labels": false,
+            "show_quantity": true,
+            "show_payment_button": true,
+            "subscriptions_enable_selectors": true
+          }
+        },
+        "16631385805859b6fd-2": {
+          "type": "tab_richtext",
+          "settings": {
+            "show_read_more": true,
+            "style": "tabs",
+            "title_1": "Tab",
+            "raw_content_1": "<p>This content type will accept <strong>rich text<\/strong> to help with adding styles and links to additional pages or content. Use this to add supplementary information to help your buyers.<\/p>",
+            "title_2": "Info",
+            "raw_content_2": "<p>You can use product metafields to assign content to this tab that is unique to an individual product.  Use tabs to highlight unique features, sizing information, or other sales information.<\/p>",
+            "title_3": "",
+            "raw_content_3": "",
+            "title_4": "",
+            "raw_content_4": "",
+            "title_5": "",
+            "raw_content_5": ""
+          }
+        }
+      },
+      "block_order": [
+        "16631385805859b6fd-0",
+        "16631385805859b6fd-1",
+        "16631385805859b6fd-2"
+      ],
+      "settings": {
+        "home_product": "adult-3-in-1-jacket",
+        "image_layout": "thumbnails-left",
+        "enable_zoom": true,
+        "enable_video_looping": false,
+        "bg_color": "",
+        "color": "",
+        "border_color": "",
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    },
+    "newsletter": {
+      "type": "section-newsletter",
+      "settings": {
+        "title": "Newsletter",
+        "richtext": "<p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.<\/p>",
+        "enable_name": false,
+        "flex_align": "align--middle-center",
+        "button_color": "btn--neutral",
+        "height": "three-fifty-height-hero",
+        "width": "default",
+        "bg_color": "#fff6a9",
+        "color": "",
+        "bg_position": "center-center",
+        "overlay_opacity": 0,
+        "overlay_color": "#000000",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "icons": {
+      "type": "section-text-row",
+      "disabled": true,
+      "blocks": {
+        "icon-0": {
+          "type": "text-item",
+          "settings": {
+            "icon_name": "icon-lock-card",
+            "icon_color": "#545454",
+            "title": "Secure transactions",
+            "text": "Transactions are handled with bank-grade security."
+          }
+        },
+        "icon-1": {
+          "type": "text-item",
+          "settings": {
+            "icon_name": "icon-basket-like",
+            "icon_color": "#545454",
+            "title": "Simple checkout",
+            "text": "Our secure checkout is quick and easy to use."
+          }
+        },
+        "icon-2": {
+          "type": "text-item",
+          "settings": {
+            "icon_name": "icon-chat",
+            "icon_color": "#545454",
+            "title": "Get in touch",
+            "text": "Have questions? Get in touch with us at any time."
+          }
+        }
+      },
+      "block_order": [
+        "icon-0",
+        "icon-1",
+        "icon-2"
+      ],
+      "settings": {
+        "text_alignment": "left",
+        "icon_size": 20,
+        "icon_alignment": "icon--top",
+        "heading_size": "h6",
+        "bg_color": "#fafafa",
+        "color": "",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "16631375949a192e7b",
+    "tabs",
+    "lookbook",
+    "16631385744ffeaec6",
+    "1663138580132377a1",
+    "newsletter",
+    "icons"
+  ]
+}
