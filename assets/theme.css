@@ -10188,7 +10188,8 @@ html:not(.js) .announcement__scale.ticker--unloaded {
 }
 @media only screen and (max-width: 749px) {
   .layout--slider .grid-container {
-    display: block;
+    display: flex;
+    flex-direction: column;
   }
 }
 .layout--slider .grid-container > * {
@@ -10198,6 +10199,7 @@ html:not(.js) .announcement__scale.ticker--unloaded {
 @media only screen and (max-width: 749px) {
   .layout--slider .grid-container > * {
     max-width: none;
+    margin-bottom: var(--gutter);
   }
 }
 
@@ -10238,6 +10240,7 @@ html:not(.js) .announcement__scale.ticker--unloaded {
 @media only screen and (max-width: 749px) {
   .layout--slider .grid-container .grid__heading-holder {
     max-width: none;
+    width: 100%;
   }
   .layout--slider .grid-container .grid__heading-holder--end {
     padding: 50px 20px;
@@ -10264,6 +10267,8 @@ html:not(.js) .announcement__scale.ticker--unloaded {
 @media only screen and (max-width: 749px) {
   .layout--slider .grid-container > .grid__heading-holder + * {
     max-width: none;
+    width: 100%;
+    padding: 0;
   }
 }
 @media only screen and (min-width: 750px) {
@@ -24521,4 +24526,14 @@ ul.tabs--center > li {
 
 .brick__section .hero__content {
   opacity: 0.9;
+}
+
+@media only screen and (max-width: 749px) {
+  .product-grid--mobile-slider:not(.flickity-slider--default) .product-item {
+    width: calc(50% - 50px);
+    margin-right: 2%;
+  }
+  .layout--slider .grid-container .grid__heading-holder .grid__heading-container {
+    padding: var(--outer);
+  }
 }
